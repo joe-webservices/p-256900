@@ -52,13 +52,9 @@ const Navbar = () => {
             e.preventDefault();
             scrollToTop();
           }}
-          aria-label="Pulse Robot"
+          aria-label="Lenin Anto"
         >
-          <img 
-            src="/logo.svg" 
-            alt="Pulse Robot Logo" 
-            className="h-7 sm:h-8" 
-          />
+          <span className="text-xl font-bold text-pulse-500">LA</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -73,8 +69,11 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a href="#features" className="nav-link">About</a>
-          <a href="#details" className="nav-link">Contact</a>
+          <a href="#about" className="nav-link">About</a>
+          <a href="#skills" className="nav-link">Skills</a>
+          <a href="#experience" className="nav-link">Experience</a>
+          <a href="#projects" className="nav-link">Projects</a>
+          <a href="#contact" className="nav-link">Contact</a>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -106,7 +105,7 @@ const Navbar = () => {
             Home
           </a>
           <a 
-            href="#features" 
+            href="#about" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={() => {
               setIsMenuOpen(false);
@@ -116,7 +115,37 @@ const Navbar = () => {
             About
           </a>
           <a 
-            href="#details" 
+            href="#skills" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Skills
+          </a>
+          <a 
+            href="#experience" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Experience
+          </a>
+          <a 
+            href="#projects" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Projects
+          </a>
+          <a 
+            href="#contact" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={() => {
               setIsMenuOpen(false);
