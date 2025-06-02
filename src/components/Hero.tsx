@@ -166,7 +166,7 @@ const Hero = () => {
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm">
                   <img
                     ref={imageRef}
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                    src="/LeninAnto.jpg"
                     alt="Lenin Anto"
                     className="w-full h-full object-cover transition-transform duration-300"
                   />
