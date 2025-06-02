@@ -18,7 +18,6 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // Prevent background scrolling when menu is open
     document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
   };
 
@@ -28,7 +27,6 @@ const Navbar = () => {
       behavior: 'smooth'
     });
     
-    // Close mobile menu if open
     if (isMenuOpen) {
       setIsMenuOpen(false);
       document.body.style.overflow = '';
@@ -38,30 +36,29 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-2 sm:py-3 md:py-4 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300",
         isScrolled 
-          ? "bg-white/80 backdrop-blur-md shadow-sm" 
+          ? "bg-black/80 backdrop-blur-md" 
           : "bg-transparent"
       )}
     >
-      <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container flex items-center justify-between px-6 md:px-8">
         <a 
           href="#" 
-          className="flex items-center space-x-2"
+          className="text-2xl font-bold text-white"
           onClick={(e) => {
             e.preventDefault();
             scrollToTop();
           }}
           aria-label="Lenin Anto"
         >
-          <span className="text-xl font-bold text-pulse-500">LA</span>
+          LA
         </a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           <a 
             href="#" 
-            className="nav-link"
+            className="text-white hover:text-gray-300 transition-colors duration-300"
             onClick={(e) => {
               e.preventDefault();
               scrollToTop();
@@ -69,16 +66,15 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#skills" className="nav-link">Skills</a>
-          <a href="#experience" className="nav-link">Experience</a>
-          <a href="#projects" className="nav-link">Projects</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <a href="#about" className="text-white hover:text-gray-300 transition-colors duration-300">About</a>
+          <a href="#skills" className="text-white hover:text-gray-300 transition-colors duration-300">Skills</a>
+          <a href="#experience" className="text-white hover:text-gray-300 transition-colors duration-300">Experience</a>
+          <a href="#projects" className="text-white hover:text-gray-300 transition-colors duration-300">Projects</a>
+          <a href="#contact" className="text-white hover:text-gray-300 transition-colors duration-300">Contact</a>
         </nav>
 
-        {/* Mobile menu button - increased touch target */}
         <button 
-          className="md:hidden text-gray-700 p-3 focus:outline-none" 
+          className="md:hidden text-white p-2" 
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -86,15 +82,14 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation - improved for better touch experience */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
-        isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
+        "fixed inset-0 z-40 bg-black flex flex-col justify-center items-center md:hidden transition-all duration-300",
+        isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
       )}>
-        <nav className="flex flex-col space-y-8 items-center mt-8">
+        <nav className="flex flex-col space-y-8 text-center">
           <a 
             href="#" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-2xl text-white hover:text-gray-300 transition-colors"
             onClick={(e) => {
               e.preventDefault();
               scrollToTop();
@@ -106,7 +101,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#about" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-2xl text-white hover:text-gray-300 transition-colors"
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -116,7 +111,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#skills" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-2xl text-white hover:text-gray-300 transition-colors"
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -126,7 +121,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#experience" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-2xl text-white hover:text-gray-300 transition-colors"
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -136,7 +131,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#projects" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-2xl text-white hover:text-gray-300 transition-colors"
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -146,7 +141,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#contact" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-2xl text-white hover:text-gray-300 transition-colors"
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';

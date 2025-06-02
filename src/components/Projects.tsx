@@ -1,83 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { cn } from "@/lib/utils";
 import { ExternalLink, Github } from "lucide-react";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  status: string;
-  technologies: string[];
-  index: number;
-}
-
-const ProjectCard = ({ title, description, status, technologies, index }: ProjectCardProps) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-    
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
-  
-  return (
-    <div 
-      ref={cardRef}
-      className={cn(
-        "feature-card glass-card opacity-0 p-4 sm:p-6",
-        "lg:hover:bg-gradient-to-br lg:hover:from-white lg:hover:to-pulse-50",
-        "transition-all duration-300"
-      )}
-      style={{ animationDelay: `${0.1 * index}s` }}
-    >
-      <div className="flex justify-between items-start mb-4">
-        <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
-        <span className="px-2 py-1 bg-pulse-100 text-pulse-600 text-xs rounded-full">
-          {status}
-        </span>
-      </div>
-      <p className="text-gray-600 text-sm sm:text-base mb-4">{description}</p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        {technologies.map((tech, techIndex) => (
-          <span 
-            key={techIndex}
-            className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-      <div className="flex space-x-3">
-        <button className="flex items-center space-x-1 text-sm text-pulse-500 hover:text-pulse-600">
-          <Github size={16} />
-          <span>View Code</span>
-        </button>
-        <button className="flex items-center space-x-1 text-sm text-pulse-500 hover:text-pulse-600">
-          <ExternalLink size={16} />
-          <span>Live Demo</span>
-        </button>
-      </div>
-    </div>
-  );
-};
 
 const Projects = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -112,43 +35,74 @@ const Projects = () => {
   }, []);
   
   return (
-    <section className="py-12 sm:py-16 md:py-20 pb-0 relative bg-gray-50" id="projects" ref={sectionRef}>
-      <div className="section-container">
-        <div className="text-center mb-10 sm:mb-16">
-          <div className="pulse-chip mx-auto mb-3 sm:mb-4 opacity-0 fade-in-element">
-            <span>🌱 Ongoing Projects</span>
-          </div>
-          <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
-            Current <br className="hidden sm:block" />
-            <span className="text-pulse-500">Projects</span>
+    <section className="py-20 md:py-32 bg-gray-50" id="projects" ref={sectionRef}>
+      <div className="container px-6 md:px-8 max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 opacity-0 fade-in-element">
+            Projects
           </h2>
-          <p className="section-subtitle mx-auto opacity-0 fade-in-element">
-            Building practical solutions and documenting my growth as a developer.
-          </p>
+          <div className="w-12 h-0.5 bg-black mx-auto opacity-0 fade-in-element"></div>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          <ProjectCard
-            title="Personal Portfolio"
-            description="Building my personal portfolio to document growth and showcase practical work with modern web technologies."
-            status="In Progress"
-            technologies={["React", "TypeScript", "Tailwind CSS"]}
-            index={0}
-          />
-          <ProjectCard
-            title="Coding Challenges"
-            description="Participating in coding challenges and front-end design contests to improve problem-solving skills."
-            status="Ongoing"
-            technologies={["JavaScript", "React", "CSS"]}
-            index={1}
-          />
-          <ProjectCard
-            title="System Automation"
-            description="Exploring system automation projects using Python to streamline repetitive tasks and improve efficiency."
-            status="Exploring"
-            technologies={["Python", "Automation", "Scripts"]}
-            index={2}
-          />
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            <div className="bg-white p-8 rounded-lg shadow-sm border opacity-0 fade-in-element">
+              <h3 className="text-2xl font-bold mb-4">Personal Portfolio</h3>
+              <p className="text-gray-600 mb-6">
+                Building my personal portfolio to document growth and showcase practical work. 
+                Features responsive design, smooth animations, and modern web technologies.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">React</span>
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">TypeScript</span>
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">Tailwind CSS</span>
+              </div>
+              <div className="flex gap-4">
+                <a 
+                  href="#" 
+                  className="flex items-center gap-2 text-black hover:underline"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Live Demo
+                </a>
+                <a 
+                  href="#" 
+                  className="flex items-center gap-2 text-black hover:underline"
+                >
+                  <Github className="w-4 h-4" />
+                  Code
+                </a>
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-sm border opacity-0 fade-in-element">
+              <h3 className="text-2xl font-bold mb-4">Frontend Design Contests</h3>
+              <p className="text-gray-600 mb-6">
+                Participating in coding challenges and front-end design contests to improve skills 
+                and learn new techniques from the community.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">HTML</span>
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">CSS</span>
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">JavaScript</span>
+              </div>
+              <p className="text-sm text-gray-500">Ongoing • Multiple platforms</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-sm border opacity-0 fade-in-element">
+              <h3 className="text-2xl font-bold mb-4">System Automation Projects</h3>
+              <p className="text-gray-600 mb-6">
+                Exploring system automation projects using Python to streamline workflows 
+                and automate repetitive tasks.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">Python</span>
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">Automation</span>
+                <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">Scripting</span>
+              </div>
+              <p className="text-sm text-gray-500">In Development</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,5 @@
 
 import React, { useEffect, useRef } from "react";
-import { cn } from "@/lib/utils";
 
 const Experience = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -35,64 +34,44 @@ const Experience = () => {
   }, []);
   
   return (
-    <section className="py-12 sm:py-16 md:py-20 relative bg-white" id="experience" ref={sectionRef}>
-      <div className="section-container">
-        <div className="text-center mb-10 sm:mb-16">
-          <div className="pulse-chip mx-auto mb-3 sm:mb-4 opacity-0 fade-in-element">
-            <span>💼 Professional Experience</span>
-          </div>
-          <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
-            Work <br className="hidden sm:block" />
-            <span className="text-pulse-500">Experience</span>
+    <section className="py-20 md:py-32 bg-white" id="experience" ref={sectionRef}>
+      <div className="container px-6 md:px-8 max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 opacity-0 fade-in-element">
+            Experience
           </h2>
+          <div className="w-12 h-0.5 bg-black mx-auto opacity-0 fade-in-element"></div>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 opacity-0 fade-in-element">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">Frontend Web Developer</h3>
-                <p className="text-pulse-500 font-medium">Joe Web Services • Freelance</p>
+        <div className="max-w-4xl mx-auto space-y-12">
+          <div className="opacity-0 fade-in-element">
+            <div className="border-l-2 border-black pl-8 relative">
+              <div className="absolute w-4 h-4 bg-black rounded-full -left-2 top-0"></div>
+              <div className="mb-4">
+                <h3 className="text-2xl font-bold">Frontend Web Developer</h3>
+                <p className="text-lg text-gray-600">Joe Web Services • Freelance</p>
+                <p className="text-sm text-gray-500">May 2025 – Present | Remote</p>
               </div>
-              <div className="text-sm text-gray-600 mt-2 sm:mt-0">
-                <span>May 2025 – Present</span>
-                <br />
-                <span>Remote</span>
-              </div>
-            </div>
-            
-            <div className="space-y-3 text-gray-600">
-              <div className="flex items-start space-x-3">
-                <span className="text-pulse-500 mt-1">•</span>
-                <p>Built responsive web interfaces using HTML, CSS, JavaScript</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-pulse-500 mt-1">•</span>
-                <p>Developed dynamic frontend components with React</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-pulse-500 mt-1">•</span>
-                <p>Collaborated across teams to ensure client satisfaction and timely delivery</p>
-              </div>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Built responsive web interfaces using HTML, CSS, JavaScript</li>
+                <li>• Developed dynamic frontend components with React</li>
+                <li>• Collaborated across teams to ensure client satisfaction and timely delivery</li>
+              </ul>
             </div>
           </div>
-        </div>
-
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="bg-gray-50 rounded-lg p-6 sm:p-8 opacity-0 fade-in-element">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">🎓 Education</h3>
-                <p className="text-pulse-500 font-medium">B.Sc. Computer Science</p>
+          
+          <div className="opacity-0 fade-in-element">
+            <div className="border-l-2 border-gray-300 pl-8 relative">
+              <div className="absolute w-4 h-4 bg-gray-300 rounded-full -left-2 top-0"></div>
+              <div className="mb-4">
+                <h3 className="text-2xl font-bold">Education</h3>
+                <p className="text-lg text-gray-600">B.Sc. Computer Science</p>
+                <p className="text-sm text-gray-500">2023 – 2026</p>
               </div>
-              <div className="text-sm text-gray-600 mt-2 sm:mt-0">
-                <span>2023 – 2026</span>
+              <div className="text-gray-700">
+                <p>Sacred Heart College (Autonomous), Thirupattur</p>
+                <p className="mt-2"><strong>Activities:</strong> Member of AICUF</p>
               </div>
-            </div>
-            
-            <div className="space-y-3 text-gray-600">
-              <p>Sacred Heart College (Autonomous), Thirupattur</p>
-              <p><strong>Activities:</strong> Member of AICUF</p>
             </div>
           </div>
         </div>
