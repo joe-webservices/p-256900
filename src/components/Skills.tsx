@@ -135,6 +135,7 @@ const Skills = () => {
                   Fundamentals of web design principles, user experience, and modern development practices.
                 </p>
               </div>
+              
             </div>
           </div>
         </div>

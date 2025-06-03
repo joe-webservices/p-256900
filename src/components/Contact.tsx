@@ -92,23 +92,23 @@ const Contact = () => {
                 <Linkedin className="w-7 h-7" />
               </a>
               <a 
-                href="#" 
+                href="https://instagram.com/__lenin_anto__" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
               >
                 <Instagram className="w-7 h-7" />
               </a>
-              <a 
+              {/* <a 
                 href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
               >
                 <Twitter className="w-7 h-7" />
-              </a>
+              </a> */}
               <a 
-                href="#" 
+                href="https://github.com/LeninAnto" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"

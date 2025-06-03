@@ -57,7 +57,7 @@ const Projects = () => {
                 <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">TypeScript</span>
                 <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">Tailwind CSS</span>
               </div>
-              <div className="flex gap-4">
+              {/* <div className="flex gap-4">
                 <a 
                   href="#" 
                   className="flex items-center gap-2 text-black hover:underline"
@@ -72,10 +72,10 @@ const Projects = () => {
                   <Github className="w-4 h-4" />
                   Code
                 </a>
-              </div>
+              </div> */}
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm border opacity-0 fade-in-element">
+            {/* <div className="bg-white p-8 rounded-lg shadow-sm border opacity-0 fade-in-element">
               <h3 className="text-2xl font-bold mb-4">Frontend Design Contests</h3>
               <p className="text-gray-600 mb-6">
                 Participating in coding challenges and front-end design contests to improve skills 
@@ -101,7 +101,7 @@ const Projects = () => {
                 <span className="px-3 py-1 bg-gray-100 text-sm rounded-full">Scripting</span>
               </div>
               <p className="text-sm text-gray-500">In Development</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

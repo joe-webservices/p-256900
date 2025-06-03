@@ -11,9 +11,7 @@ const Hero = () => {
 
   const typingTexts = [
     "Web Developer",
-    "Frontend Specialist",
-    "React Developer",
-    "UI/UX Enthusiast"
+    "Frontend Specialist",  
   ];
 
   useEffect(() => {
@@ -158,7 +156,7 @@ const Hero = () => {
                   <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </a>
                 <a 
-                  href="https://instagram.com/lenin.anto" 
+                  href="https://instagram.com/__lenin_anto__" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110 touch-manipulation"
@@ -166,7 +164,7 @@ const Hero = () => {
                 >
                   <Instagram className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
                 </a>
-                <a 
+                {/* <a 
                   href="https://twitter.com/lenin_anto" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -174,9 +172,9 @@ const Hero = () => {
                   aria-label="Twitter Profile"
                 >
                   <Twitter className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-                </a>
+                </a> */}
                 <a 
-                  href="https://github.com/leninanto" 
+                  href="https://github.com/LeninAnto" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110 touch-manipulation"
