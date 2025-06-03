@@ -8,6 +8,9 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import MobileMenu from "@/components/MobileMenu";
+import ScrollProgress from "@/components/ScrollProgress";
+import FloatingActionButton from "@/components/FloatingActionButton";
 
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
@@ -57,7 +60,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
       <Navbar />
+      <MobileMenu />
       <main className="space-y-4 sm:space-y-8">
         <Hero />
         <AboutSection />
@@ -67,6 +72,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 };

@@ -2,11 +2,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Linkedin, Instagram, Twitter, Github } from "lucide-react";
+import TypingAnimation from "./TypingAnimation";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+
+  const typingTexts = [
+    "Web Developer",
+    "Frontend Specialist",
+    "React Developer",
+    "UI/UX Enthusiast"
+  ];
 
   useEffect(() => {
     const checkMobile = () => {
@@ -64,13 +72,13 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800"></div>
       
-      <div className="container px-6 md:px-8 relative z-10">
+      <div className="container px-4 sm:px-6 md:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left order-2 lg:order-1">
               <div 
-                className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm mb-8 opacity-0 animate-fade-in" 
+                className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-xs sm:text-sm mb-6 sm:mb-8 opacity-0 animate-fade-in" 
                 style={{ animationDelay: "0.1s" }}
               >
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
@@ -78,92 +86,92 @@ const Hero = () => {
               </div>
               
               <h1 
-                className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 opacity-0 animate-fade-in tracking-tight" 
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-4 sm:mb-6 opacity-0 animate-fade-in tracking-tight font-ndot" 
                 style={{ animationDelay: "0.3s" }}
               >
                 Lenin Anto
               </h1>
               
-              <h2 
-                className="text-2xl md:text-3xl font-light text-gray-300 mb-8 opacity-0 animate-fade-in" 
+              <div 
+                className="text-xl sm:text-2xl md:text-3xl font-light text-gray-300 mb-6 sm:mb-8 opacity-0 animate-fade-in min-h-[2.5rem] sm:min-h-[3rem] font-ntype" 
                 style={{ animationDelay: "0.5s" }}
               >
-                Web Developer
-              </h2>
+                <TypingAnimation texts={typingTexts} />
+              </div>
               
               <p 
                 style={{ animationDelay: "0.7s" }} 
-                className="text-lg text-gray-400 mb-12 leading-relaxed opacity-0 animate-fade-in font-light"
+                className="text-base sm:text-lg text-gray-400 mb-8 sm:mb-12 leading-relaxed opacity-0 animate-fade-in font-light px-4 sm:px-0 font-ntype"
               >
                 Exploring JavaScript, Python & Web Technologies<br />
-                <span className="text-base text-gray-500">📍 Kallakurichi, Tamil Nadu, India</span>
+                <span className="text-sm sm:text-base text-gray-500">📍 Kallakurichi, Tamil Nadu, India</span>
               </p>
               
               <div 
-                className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center mb-16 opacity-0 animate-fade-in" 
+                className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start items-center mb-12 sm:mb-16 opacity-0 animate-fade-in px-4 sm:px-0" 
                 style={{ animationDelay: "0.9s" }}
               >
                 <a 
                   href="#contact" 
-                  className="flex items-center justify-center group bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
+                  className="flex items-center justify-center group bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base font-ntype"
                 >
                   Get In Touch
-                  <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a 
                   href="#projects" 
-                  className="flex items-center justify-center border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
+                  className="flex items-center justify-center border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300 w-full sm:w-auto text-sm sm:text-base font-ntype"
                 >
                   View Projects
                 </a>
               </div>
 
               <div 
-                className="flex justify-center lg:justify-start space-x-6 opacity-0 animate-fade-in" 
+                className="flex justify-center lg:justify-start space-x-4 sm:space-x-6 opacity-0 animate-fade-in px-4 sm:px-0" 
                 style={{ animationDelay: "1.1s" }}
               >
                 <a 
                   href="https://linkedin.com/in/lenin-anto-34b85134b" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
                 <a 
                   href="https://instagram.com/lenin.anto" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
                 <a 
                   href="https://twitter.com/lenin_anto" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
                 >
-                  <Twitter className="w-5 h-5" />
+                  <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
                 <a 
                   href="https://github.com/leninanto" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </div>
 
             {/* Profile Image */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div 
                 className="relative opacity-0 animate-fade-in" 
                 style={{ animationDelay: "1.3s" }}
               >
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 sm:border-4 border-white/20 backdrop-blur-sm">
                   <img
                     ref={imageRef}
                     src="/LeninAnto.jpg"
@@ -171,16 +179,16 @@ const Hero = () => {
                     className="w-full h-full object-cover transition-transform duration-300"
                   />
                 </div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-white/20 to-transparent rounded-full blur-2xl opacity-50"></div>
+                <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-white/20 to-transparent rounded-full blur-2xl opacity-50"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-2 sm:h-3 bg-white rounded-full mt-2"></div>
         </div>
       </div>
     </section>
