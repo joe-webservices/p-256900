@@ -37,7 +37,7 @@ const FloatingActionButton = () => {
     {
       icon: Phone,
       label: "Call",
-      onClick: () => window.open("tel:+1234567890"),
+      onClick: () => window.open("tel:+91 8072551594"),
       color: "bg-green-500 hover:bg-green-600"
     }
   ];
