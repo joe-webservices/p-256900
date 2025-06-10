@@ -135,7 +135,13 @@ const Skills = () => {
                   Fundamentals of web design principles, user experience, and modern development practices.
                 </p>
               </div>
-              
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h4 className="font-medium mb-2">ChatGPT for Web Developers</h4>
+                <p className="text-gray-600 text-sm mb-2 font-light">LinkedIn • 2025</p>
+                <p className="text-gray-600 text-sm font-light">
+                  ChatGPT has taken the world by storm. It’s a game changer for web developers, too, who can use it to improve the efficiency and productivity of their overall workflows. 
+                </p>
+              </div>
             </div>
           </div>
         </div>
